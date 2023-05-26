@@ -4,8 +4,21 @@ const port = 3000;
 
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  
+  let today = new Date();
+  let currentDay = today.getDay();
+  let day = "";
+
+  if (currentDay === 6 || currentDay === 0) {
+    day = "Weekend";
+    res.send("weekend");
+  } else {
+    day = "Weekday";
+    res.send("weekday");
+  }
 });
 
 
