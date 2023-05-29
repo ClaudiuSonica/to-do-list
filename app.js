@@ -9,6 +9,7 @@ let items = ["Prepare your coffee", "Start the PC", "Start coding"];
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   let today = new Date();

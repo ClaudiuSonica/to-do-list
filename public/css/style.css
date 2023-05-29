@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: azure;
+  background-image: linear-gradient(
+    65deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Playfair", serif;
+  font-size: 3rem;
+  color: #18195e;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  color: #2e2f75;
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 400px;
+}
+
+#header {
+  text-align: center;
+  margin-block-end: 2em;
+  background-color: paleturquoise;
+}
+
+.wrapper {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.3);
+  padding: 1em;
+}
+
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 1em;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #18195e;
+}
+
+form {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+button {
+  min-width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: transparent;
+  margin-block-start: .25em;
+}
+
+input[type="text"] {
+  width: 80%;
+  height: 2em;
+  border: none;
+  top: 10px;
+  background: transparent;
+  font-size: 1.5rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #18195e;
+}
+
+::placeholder {
+  color: gray;
+  opacity: 1;
+}
